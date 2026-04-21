@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Stack JavaScript | CodeForge</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+:root {
+  --bg: #EBF2F7;
+  --card: #ffffff;
+  --text: #081F5C;
+  --text-light: #334EAC;
+  --accent: #BAD6EB;
+  --primary: #334EAC;
+}
+
+[data-theme="dark"] {
+  --bg: #081F5C;
+  --card: #1e2a5e;
+  --text: #EBF2F7;
+  --text-light: #BAD6EB;
+  --accent: #334EAC;
+  --primary: #BAD6EB;
+}
+
+body{
+  background: var(--bg);
+  color: var(--text);
+}
+
+.card{
+  background: var(--card);
+  border:1px solid var(--accent);
+}
+</style>
+</head>
+
+<body>
+
+<div class="max-w-5xl mx-auto py-20 px-6">
+
+<h1 class="text-5xl font-bold mb-6">Full-Stack JavaScript</h1>
+
+<p class="text-lg mb-10" style="color: var(--text-light);">
+Build modern web applications using the JavaScript ecosystem.
+</p>
+
+<div class="card p-8 rounded-3xl">
+
+<h2 class="text-2xl font-bold mb-4">Technologies</h2>
+
+<ul class="list-disc pl-6 space-y-2">
+<li>JavaScript ES6+</li>
+<li>React</li>
+<li>Node.js</li>
+<li>Express</li>
+<li>MongoDB</li>
+</ul>
+
+<div class="text-3xl font-bold mt-8" style="color: var(--primary)">
+$329
+</div>
+
+</div>
+
+<a href="index.html"
+class="inline-block mt-10 px-6 py-3 rounded-xl"
+style="background: var(--primary); color:white;">
+Back to courses
+</a>
+
+</div>
+
+<script>
+const savedTheme = localStorage.getItem("theme") || "light";
+document.documentElement.setAttribute("data-theme", savedTheme);
+</script>
+
+</body>
+</html>

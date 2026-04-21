@@ -170,39 +170,41 @@
         <h2 class="section-title text-4xl font-bold">Our Programming Courses</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="card rounded-3xl overflow-hidden">
-          <div class="h-52 bg-gradient-to-br from-[#7096D1] to-[#334EAC] flex items-center justify-center">
-            <i class="fa-solid fa-python text-8xl text-white/90"></i>
-          </div>
-          <div class="p-8">
-            <h3 class="text-2xl font-semibold mb-2">Python Mastery</h3>
-            <p style="color: var(--text-light);">Fundamentals to advanced applications.</p>
-            <span class="block mt-6 text-3xl font-bold" style="color: var(--primary);">$249</span>
-          </div>
-        </div>
 
-        <div class="card rounded-3xl overflow-hidden">
-          <div class="h-52 bg-gradient-to-br from-[#BAD6EB] to-[#7096D1] flex items-center justify-center">
-            <i class="fa-brands fa-js text-8xl" style="color: #081F5C;"></i>
-          </div>
-          <div class="p-8">
-            <h3 class="text-2xl font-semibold mb-2">Full-Stack JavaScript</h3>
-            <p style="color: var(--text-light);">React, Node.js & MongoDB.</p>
-            <span class="block mt-6 text-3xl font-bold" style="color: var(--primary);">$329</span>
-          </div>
-        </div>
+  <div id="python-course" class="card rounded-3xl overflow-hidden cursor-pointer">
+    <div class="h-52 bg-gradient-to-br from-[#7096D1] to-[#334EAC] flex items-center justify-center">
+      <i class="fa-solid fa-python text-8xl text-white/90"></i>
+    </div>
+    <div class="p-8">
+      <h3 class="text-2xl font-semibold mb-2">Python Mastery</h3>
+      <p style="color: var(--text-light);">Fundamentals to advanced applications.</p>
+      <span class="block mt-6 text-3xl font-bold" style="color: var(--primary);">$249</span>
+    </div>
+  </div>
 
-        <div class="card rounded-3xl overflow-hidden">
-          <div class="h-52 bg-gradient-to-br from-[#334EAC] to-[#081F5C] flex items-center justify-center">
-            <i class="fa-solid fa-mobile-screen text-8xl text-white/90"></i>
-          </div>
-          <div class="p-8">
-            <h3 class="text-2xl font-semibold mb-2">Mobile Development</h3>
-            <p style="color: var(--text-light);">React Native & Flutter.</p>
-            <span class="block mt-6 text-3xl font-bold" style="color: var(--primary);">$289</span>
-          </div>
-        </div>
-      </div>
+  <div id="js-course" class="card rounded-3xl overflow-hidden cursor-pointer">
+    <div class="h-52 bg-gradient-to-br from-[#BAD6EB] to-[#7096D1] flex items-center justify-center">
+      <i class="fa-brands fa-js text-8xl" style="color: #081F5C;"></i>
+    </div>
+    <div class="p-8">
+      <h3 class="text-2xl font-semibold mb-2">Full-Stack JavaScript</h3>
+      <p style="color: var(--text-light);">React, Node.js & MongoDB.</p>
+      <span class="block mt-6 text-3xl font-bold" style="color: var(--primary);">$329</span>
+    </div>
+  </div>
+
+  <div id="mobile-course" class="card rounded-3xl overflow-hidden cursor-pointer">
+    <div class="h-52 bg-gradient-to-br from-[#334EAC] to-[#081F5C] flex items-center justify-center">
+      <i class="fa-solid fa-mobile-screen text-8xl text-white/90"></i>
+    </div>
+    <div class="p-8">
+      <h3 class="text-2xl font-semibold mb-2">Mobile Development</h3>
+      <p style="color: var(--text-light);">React Native & Flutter.</p>
+      <span class="block mt-6 text-3xl font-bold" style="color: var(--primary);">$289</span>
+    </div>
+  </div>
+
+</div>
     </div>
   </section>
 
@@ -289,6 +291,18 @@
       const currentTheme = body.getAttribute('data-theme');
       const newTheme = currentTheme === 'light' ? 'dark' : 'light';
       setTheme(newTheme);
+    });
+    // Course navigation
+    document.getElementById("python-course").addEventListener("click", () => {
+      window.location.href = "python.html";
+    });
+
+    document.getElementById("js-course").addEventListener("click", () => {
+      window.location.href = "javascript.html";
+    });
+
+    document.getElementById("mobile-course").addEventListener("click", () => {
+      window.location.href = "mobile.html";
     });
   </script>
 
